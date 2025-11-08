@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto Web</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Mi Proyecto Web</h1>
+    <nav>
+      <ul>
+        <li><a href="#" data-section="inicio">Inicio</a></li>
+        <li><a href="#" data-section="servicios">Servicios</a></li>
+        <li><a href="#" data-section="contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Secciones principales -->
+    <section id="inicio" class="contenido activo">
+      <h2>Bienvenido</h2>
+      <p>Esta es la sección de inicio. Aquí va una breve descripción.</p>
+    </section>
+
+    <section id="servicios" class="contenido">
+      <h2>Nuestros Servicios</h2>
+      <p>Ofrecemos desarrollo web, redes y soluciones tecnológicas personalizadas.</p>
+    </section>
+
+    <section id="contacto" class="contenido">
+      <h2>Contáctanos</h2>
+      <img src="https://img.freepik.com/foto-gratis/vista-abogado-masculino-traje-3d_23-2151228171.jpg?semt=ais_hybrid&w=740&q=80" alt="Imagen de contacto">
+      <p>Haz clic en el botón para ver más información:</p>
+      <button id="btn-info">Mostrar información</button>
+      <p id="info" class="oculto">Estamos disponibles de lunes a viernes de 8:00 a.m. a 6:00 p.m.</p>
+    </section>
+  </main>
+
+<footer>
+  <p>&copy; <span id="year"></span> Mi Proyecto Web</p>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

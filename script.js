@@ -25,4 +25,20 @@ btnInfo.addEventListener('click', () => {
 
  document.getElementById('year').textContent = new Date().getFullYear();
 
+
  
+function validarCampo(texto) {
+  return texto.trim() !== "";
+}
+
+// Feedback inmediato en input
+const inputNombre = document.getElementById("nombre");
+const errorNombre = document.getElementById("error-nombre");
+
+inputNombre.addEventListener("input", () => {
+  if (validarCampo(inputNombre.value)) {
+    errorNombre.classList.add("oculto");
+  } else {
+    errorNombre.classList.remove("oculto");
+  }
+});

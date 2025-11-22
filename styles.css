@@ -68,3 +68,16 @@ button:hover {
   width: 200px;
   border-radius: 8px; 
 }
+
+input {
+  padding: 8px;
+  font-size: 1rem;
+  width: 250px;
+  margin-top: 5px;
+  display: block;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+}

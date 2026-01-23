@@ -3,68 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyecto Web</title>
+  <title>Proyecto Web </title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>Mi Proyecto Web</h1>
-    <nav>
-      <ul>
-        <li><a href="#" data-section="inicio">Inicio</a></li>
-        <li><a href="#" data-section="servicios">Servicios</a></li>
-        <li><a href="#" data-section="contacto">Contacto</a></li>
-      </ul>
-    </nav>
+    <div class="header-container">
+      <h1>Mi Proyecto Web</h1>
+      <nav>
+        <ul>
+          <li><a href="#" data-section="inicio" class="nav-link active">Inicio</a></li>
+          <li><a href="#" data-section="servicios" class="nav-link">Servicios</a></li>
+          <li><a href="#" data-section="contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <!-- Secciones principales -->
     <section id="inicio" class="contenido activo">
-      <h2>Bienvenido</h2>
-      <p>Esta es la sección de inicio. Aquí va una breve descripción.</p>
+      <div id="mensaje-bienvenida" class="banner-inicial">
+        <h2>Bienvenido </h2>
+      </div>
+
+      <p class="texto-intro">
+        Transformamos ideas en experiencias digitales. Nos especializamos en 
+        soluciones tecnológicas innovadoras.
+      </p>
+
+      <div class="video-container">
+        <h3>Video de Presentación</h3>
+        
+        <div id="player"></div>
+        
+        <div class="controles-video">
+          <button id="btn-play">▶ Reproducir</button>
+          <button id="btn-pause">⏸ Pausar</button>
+        </div>
+      </div>
+
+      <br>
+      <button onclick="document.querySelector('[data-section=\'servicios\']').click()">Ver Servicios</button>
     </section>
 
     <section id="servicios" class="contenido">
       <h2>Nuestros Servicios</h2>
-      <p>Ofrecemos desarrollo web, redes y soluciones tecnológicas personalizadas.</p>
+      <div class="servicios-grid">
+        <div class="card-servicio">Desarrollo Web</div>
+        <div class="card-servicio">Redes</div>
+        <div class="card-servicio">Soluciones </div>
+      </div>
     </section>
 
-    <!--  <section id="contacto" class="contenido">
-      <h2>Contáctanos</h2>
-      <img src="https://img.freepik.com/foto-gratis/vista-abogado-masculino-traje-3d_23-2151228171.jpg?semt=ais_hybrid&w=740&q=80" alt="Imagen de contacto">
-      <p>Haz clic en el botón para ver más información:</p>
-      <button id="btn-info">Mostrar información</button>
-      <p id="info" class="oculto">Estamos disponibles de lunes a viernes de 8:00 a.m. a 6:00 p.m.</p>
-    </section> -->
-    
-   
     <section id="contacto" class="contenido">
-  <h2>Contáctanos</h2>
-      <img src="https://img.freepik.com/foto-gratis/vista-abogado-masculino-traje-3d_23-2151228171.jpg?semt=ais_hybrid&w=740&q=80" alt="Imagen de contacto">
+      <h2>Contáctanos</h2>
+      
+      <div class="perfil-container">
+        <img src="https://img.freepik.com/foto-gratis/vista-abogado-masculino-traje-3d_23-2151228171.jpg?semt=ais_hybrid&w=740&q=80" alt="Imagen de contacto">
+      </div>
 
-  <p>Haz clic en el botón para ver más información:</p>
-  <button id="btn-info">Mostrar información</button>
-  <p id="info" class="oculto">Estamos disponibles de lunes a viernes de 8:00 a.m. a 6:00 p.m.</p>
-
-  
-
-  <h3>Envíanos un mensaje</h3>
-
-  <label for="nombre">Nombre:</label>
-  <input type="text" id="nombre" placeholder="Escribe tu nombre">
-
-  <p id="error-nombre" class="error oculto"> Este campo no puede estar vacío</p>
-
-</section>
+      <div class="info-bloque">
+        <p>Haz clic para ver horarios:</p>
+        <button id="btn-info">Mostrar información</button>
+        <p id="info" class="oculto info-box">🕒 Estamos disponibles de lunes a viernes de 8:00 a.m. a 6:00 p.m.</p>
+      </div>
 
       
-    
+
+      <h3>Envíanos un mensaje</h3>
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="Escribe tu nombre aquí...">
+        <p id="error-nombre" class="error oculto"> Este campo no puede estar vacío</p>
+      </div>
+    </section>
   </main>
 
-<footer>
-  <p>&copy; <span id="year"></span> Mi Proyecto Web</p>
-</footer>
+  <footer>
+    <p>&copy; <span id="year"></span> Mi Proyecto Web </p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
